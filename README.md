@@ -4,7 +4,7 @@ An open sourced MEE6 to make your life easier.
 ## Setup
 
 ```bash
-$ git clone REPO
+$ git clone https://github.com/Suni29/MEE6-FOSS.git
 ```
 
 ## TODO
