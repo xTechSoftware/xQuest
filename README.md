@@ -10,6 +10,7 @@ $ git clone REPO
 ## TODO
 
 - [ ] Setup Project REPO
+- [ ] Webpanel
 - [ ] Welcome module
 - [ ] Custom commands module
 - [ ] Reaction roles module
