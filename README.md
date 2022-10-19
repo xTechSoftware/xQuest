@@ -5,4 +5,5 @@ An open sourced MEE6 to make your life easier.
 
 - [ ] Setup Project REPO
 
-## Credits
+## Contributors
+None.
