@@ -3,6 +3,6 @@ An open sourced MEE6 to make your life easier.
 
 ## TODO
 
-[ ] Setup Project REPO
+- [ ] Setup Project REPO
 
 ## Credits
