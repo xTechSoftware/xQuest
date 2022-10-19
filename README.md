@@ -9,7 +9,7 @@ $ git clone https://github.com/Suni29/MEE6-FOSS.git
 
 ## TODO
 
-- [ ] Setup Project REPO
+- [ ] Setup Project REPO (Typescript, ESLint, etc.)
 - [ ] Webpanel
 - [ ] Welcome module
 - [ ] Custom commands module
