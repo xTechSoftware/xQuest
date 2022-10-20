@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "outDir": "./dist/",
+        "removeComments": true
+    },
+    "include": ["**/*"],
+    "exclude": ["node_modules"]
+}
