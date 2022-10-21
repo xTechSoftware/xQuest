@@ -1,13 +1,26 @@
-# MEE6-FOSS
-An open sourced MEE6 to make your life easier.
+<h2 align="center">
+  <img src="https://raw.githubusercontent.com/Suni29/xQuest/main/README/xQuestBanner-medium.png" alt="Banner"/>
+  <br/><br/>
+  <a href="https://xquest.website">xQuest</a> is a free Discord Bot to enhance your server
+  <br/>
+  and experience on your Discord server.
+  <br/><br/>
+  <i>Plus we have almost every MEE6 feature for free!</i>
+  <br/><br/>
+</h2>
 
-## Setup
+# Important
+This project is really new, I need contributors to finish this project faster.<br/>
+The basic idea is we make a MEE6 replica with every MEE6 feature.<br/>
+You can start contributing by creating a pull request to this repo.<br/>
+
+# Host xQuest Manually
 
 ```bash
-$ git clone https://github.com/Suni29/MEE6-FOSS.git
+$ git clone https://github.com/Suni29/xQuest.git
 ```
 
-## TODO
+# TODO
 
 - [ ] Setup Project REPO (Typescript, ESLint, etc.)
 - [ ] Setup MongoDB
@@ -36,5 +49,5 @@ $ git clone https://github.com/Suni29/MEE6-FOSS.git
 - [ ] Economy module
 - [ ] Web3 modules (maybe)
 
-## Contributors
+# Contributors
 None.
