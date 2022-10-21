@@ -2,25 +2,29 @@
   "dependencies": {
     "discord.js": "^14.6.0"
   },
-  "name": "mee6-foss",
-  "description": "An open sourced MEE6 to make your life easier.",
-  "version": "1.0.0",
+  "name": "xquest",
+  "description": "An open sourced Discord Bot to make your life easier.",
+  "version": "0.1",
   "main": "index.js",
-  "devDependencies": {},
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.25.0"
+  },
   "scripts": {
     "install": "npm i",
-    "build": "tsc", 
+    "build": "tsc",
     "prod": "node ./dist/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Suni29/MEE6-FOSS.git"
+    "url": "git+https://github.com/Suni29/xQuest.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Suni29",
+  "contributors": [],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Suni29/MEE6-FOSS/issues"
+    "url": "https://github.com/Suni29/xQuest/issues"
   },
-  "homepage": "https://github.com/Suni29/MEE6-FOSS#readme"
+  "homepage": "https://github.com/Suni29/xQuest#readme"
 }
