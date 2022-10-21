@@ -4,14 +4,14 @@
   },
   "name": "xquest",
   "description": "An open sourced Discord Bot to make your life easier.",
-  "version": "0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "type": "module",
   "devDependencies": {
     "eslint": "^8.25.0"
   },
   "scripts": {
-    "install": "npm i",
+    "setup": "npm i",
     "build": "tsc",
     "prod": "node ./dist/index.js"
   },
