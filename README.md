@@ -1,11 +1,9 @@
 <h2 align="center">
   <img src="https://raw.githubusercontent.com/Suni29/xQuest/main/README/xQuestBanner-medium.png" alt="Banner"/>
   <br/><br/>
-  <a href="https://xquest.website">xQuest</a> is a free Discord Bot to enhance your server
+  <a href="https://xquest.website">xQuest</a> is a free Discord Bot to enhance your server, and experience on your Discord server.
   <br/>
-  and experience on your Discord server.
-  <br/><br/>
-  <i>Plus we have almost every MEE6 feature for free!</i>
+  <i>The ultimate MEE6 killer.</i>
   <br/><br/>
 </h2>
 
