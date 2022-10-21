@@ -9,7 +9,7 @@
   <br/><br/>
 </h2>
 
-# <img src="https://cdn.discordapp.com/emojis/999841176985292880.webp?size=48&quality=lossless" /> Important
+# <img src="https://cdn.discordapp.com/emojis/999841176985292880.webp?size=48&quality=lossless" size="50px"/> Important
 This project is really new, I need contributors to finish this project faster.<br/>
 The basic idea is we make a MEE6 replica with every MEE6 feature.<br/>
 You can start contributing by creating a pull request to this repo.<br/>
