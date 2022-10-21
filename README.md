@@ -9,18 +9,18 @@
   <br/><br/>
 </h2>
 
-# <img src="https://cdn.discordapp.com/emojis/999841176985292880.webp?size=48&quality=lossless" size="50px"/> Important
+# ❗ Important
 This project is really new, I need contributors to finish this project faster.<br/>
 The basic idea is we make a MEE6 replica with every MEE6 feature.<br/>
 You can start contributing by creating a pull request to this repo.<br/>
 
-# Host xQuest Manually
+# 💾 Host xQuest Manually
 
 ```bash
 $ git clone https://github.com/Suni29/xQuest.git
 ```
 
-# TODO
+# 📝 TODO
 
 - [ ] Setup Project REPO (Typescript, ESLint, etc.)
 - [ ] Setup MongoDB
@@ -49,5 +49,5 @@ $ git clone https://github.com/Suni29/xQuest.git
 - [ ] Economy module
 - [ ] Web3 modules (maybe)
 
-# Contributors
+# 📚 Contributors
 None.
