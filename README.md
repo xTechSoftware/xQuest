@@ -22,7 +22,7 @@ $ git clone https://github.com/Suni29/xQuest.git
 
 # 📝 TODO
 
-- [xx] Setup Project REPO (Typescript, ESLint, etc.)
+- [x] Setup Project REPO (Typescript, ESLint, etc.)
 - [ ] Setup MongoDB
 - [ ] Webpanel
 - [ ] Welcome module
