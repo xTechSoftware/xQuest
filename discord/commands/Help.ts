@@ -1,14 +1,13 @@
-import { Client, Interaction, PermissionFlagsBits } from "discord.js";
+import { Client, Interaction } from "discord.js";
+import Command from "../../interfaces/Command.js";
 
-export default {
+const Props:Command = {
     name: `Help`,
     command: `help`,
-    description: ``,
-
-    permissions: [],
-    ownerOnly: false,
-
+    description: `Lists all useful information.`,
     callback: ( client:Client, interaction:Interaction ) => {
-        
+
     }
 }
+
+export default Props;

@@ -20,6 +20,7 @@ import { readdirSync } from 'fs';
 const cache = {
     commands: new Map(),
 };
+
 let client = new Client({
     intents: [
         GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildPresences,
@@ -49,3 +50,5 @@ readdirSync(`./discord/commands/`).filter(file => file.endsWith(`.js`)).forEach(
 });
 
 client.login(process.env["TOKEN"]);
+
+export { cache, client };
