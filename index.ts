@@ -25,16 +25,14 @@ let client = new Client({
     ]
 });
 
-const eventFiles = readdirSync(`./discord/events/`).filter(file => file.endsWith(`.js`));
-
-for(let event of eventFiles){
-    import pull from `./discord/events/${event}`;
-    if(!pull.callback || !pull.event){
-        console.error(`${event.replace(`.js`, ``)} is missing a callback function.`)
+readdirSync(`./discord/events/`).filter(file => file.endsWith(`.js`)).forEach(async file => {
+    let pull = await import(`./discord/events/${file}`);
+    if(pull.default.callback && pull.default.event){
+        client.on(pull.default.event, pull.default.callback.bind(null, client));
+        console.info(`${file.replace(`.js`, ``)} has been registered.`)
     }else{
-        client.on(pull.event, pull.callback.bind(null, client));
-        console.info(`${event.replace(`.js`, ``)} has been registered.`)
+        console.error(`${file.replace(`.js`, ``)} is missing a callback function.`)
     }
-}
+});
 
 client.login(process.env["TOKEN"]);

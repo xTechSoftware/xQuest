@@ -1,6 +1,6 @@
 import { Client, Events } from "discord.js"
 
-module.exports = {
+export default {
     event: Events.ClientReady,
     once: true,
     callback: async ( client:Client ) => {
