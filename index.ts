@@ -14,11 +14,12 @@ console.error = ( message:string ) => {
     process.stdout.write(`\x1b[30m\x1b[41m ERROR \x1b[0m ${message}\n`)
 }
 
-import { Client, Events, GatewayIntentBits } from 'discord.js';
+import { Client, REST, Routes, Events, GatewayIntentBits, PermissionFlagsBits, SlashCommandBuilder } from 'discord.js';
 import { readdirSync } from 'fs';
 
 const cache = {
     commands: new Map(),
+    slashCommands: []
 };
 
 let client = new Client({
@@ -43,6 +44,14 @@ readdirSync(`./discord/commands/`).filter(file => file.endsWith(`.js`)).forEach(
     let pull = (await import(`./discord/commands/${file}`)).default;
     if(pull.callback && pull.name){
         cache.commands.set(pull.name, pull);
+
+        const data = new SlashCommandBuilder()
+        .setDescription(pull.description)
+        .setName(pull.name)
+        .setDefaultMemberPermissions(pull.permissions)
+        
+        cache.slashCommands.push(data.toJSON());
+
         console.info(`${file.replace(`.js`, ``)} has been registered as a \x1b[30m\x1b[46m COMMAND \x1b[0m.`)
     }else{
         console.error(`${file.replace(`.js`, ``)} is missing a value.`)
@@ -50,5 +59,23 @@ readdirSync(`./discord/commands/`).filter(file => file.endsWith(`.js`)).forEach(
 });
 
 client.login(process.env["TOKEN"]);
+
+const rest = new REST({ version: '10' }).setToken(client.token);
+
+(async () => {
+	try {
+		console.info(`Registering slash commands.`);
+
+		const data = await rest.put(
+			Routes.applicationCommands(client.user.id),
+			{ body: cache.slashCommands },
+		);
+
+		console.info(`Registered slash commands.`);
+	} catch (error) {
+		console.error(error);
+	}
+})();
+
 
 export { cache, client };

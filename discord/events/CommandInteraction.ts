@@ -1,5 +1,5 @@
 import { Client, Events, Interaction, EmbedBuilder } from "discord.js";
-import { cache } from "../../index.js";
+import { cache, client } from "../../index.js";
 import Event from "../../interfaces/Event.js";
 
 const Props:Event = {
@@ -24,6 +24,9 @@ const Props:Event = {
                 interaction.editReply(message);
             }
         }
+
+        // TODO: Permission checking, ownerOnly checking.
+        command.callback(client, interaction);
     }
 }
 

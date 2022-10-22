@@ -1,4 +1,4 @@
-import { Client, Interaction } from "discord.js";
+import { Client, Interaction, PermissionFlagsBits } from "discord.js";
 import Command from "../../interfaces/Command.js";
 
 const Props:Command = {

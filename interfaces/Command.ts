@@ -4,7 +4,7 @@ export default interface Command {
     name: string,
     command: string,
     description: string,
-    permissions?: Array<typeof PermissionFlagsBits>,
+    permissions?: bigint,
     ownerOnly?: boolean,
     ephemeral?: boolean,
     callback: Function
