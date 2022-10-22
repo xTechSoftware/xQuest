@@ -4,9 +4,9 @@ import Event from "../../interfaces/Event.js";
 
 const Props:Event = {
     event: Events.InteractionCreate,
-    callback: async ( interaction:Interaction ) => {
+    callback: async ( client:Client, interaction:Interaction ) => {
         if(!interaction.isChatInputCommand()) return;
-
+        
         let { commandName } = interaction;
         let command;
 
@@ -14,18 +14,7 @@ const Props:Event = {
 
         if(!command) return;
 
-        interaction.deferReply({ ephemeral: command.ephemeral });
-
-        // @ts-ignore - Ignoring because of adding new properties to object.
-        interaction.send = (message) => {
-            if(typeof message === typeof EmbedBuilder){
-                interaction.editReply({ embeds: [message] });
-            }else{
-                interaction.editReply(message);
-            }
-        }
-
-        // TODO: Permission checking, ownerOnly checking.
+        // TODO: Permission checking - done, ownerOnly checking.
         command.callback(client, interaction);
     }
 }

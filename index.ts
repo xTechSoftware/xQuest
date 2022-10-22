@@ -14,7 +14,7 @@ console.error = ( message:string ) => {
     process.stdout.write(`\x1b[30m\x1b[41m ERROR \x1b[0m ${message}\n`)
 }
 
-import { Client, REST, Routes, Events, GatewayIntentBits, PermissionFlagsBits, SlashCommandBuilder } from 'discord.js';
+import { Client, GatewayIntentBits, PermissionFlagsBits, SlashCommandBuilder } from 'discord.js';
 import { readdirSync } from 'fs';
 
 const cache = {
@@ -47,7 +47,7 @@ readdirSync(`./discord/commands/`).filter(file => file.endsWith(`.js`)).forEach(
 
         const data = new SlashCommandBuilder()
         .setDescription(pull.description)
-        .setName(pull.name)
+        .setName(pull.command)
         .setDefaultMemberPermissions(pull.permissions)
         
         cache.slashCommands.push(data.toJSON());
@@ -59,23 +59,5 @@ readdirSync(`./discord/commands/`).filter(file => file.endsWith(`.js`)).forEach(
 });
 
 client.login(process.env["TOKEN"]);
-
-const rest = new REST({ version: '10' }).setToken(client.token);
-
-(async () => {
-	try {
-		console.info(`Registering slash commands.`);
-
-		const data = await rest.put(
-			Routes.applicationCommands(client.user.id),
-			{ body: cache.slashCommands },
-		);
-
-		console.info(`Registered slash commands.`);
-	} catch (error) {
-		console.error(error);
-	}
-})();
-
 
 export { cache, client };
