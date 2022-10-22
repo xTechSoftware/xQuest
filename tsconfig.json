@@ -4,8 +4,9 @@
         "module": "ESNext",
         "moduleResolution": "NodeNext",
         "outDir": "./dist/",
-        "removeComments": true
+        "removeComments": true,
+        "skipLibCheck": true
     },
     "include": ["**/*"],
-    "exclude": ["node_modules"]
+    "exclude": ["**/node_modules/*"]
 }
