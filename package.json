@@ -12,7 +12,7 @@
   },
   "scripts": {
     "setup": "npm i && npm i --global typescript && npm i --global nodemon",
-    "build": "tsc",
+    "build": "rm -rf ./dist/ && tsc",
     "prod": "cd ./dist/ && node index.js",
     "dev": "nodemon --exec \"npm run build && npm run prod\""
   },
